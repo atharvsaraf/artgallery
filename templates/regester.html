@@ -1,0 +1,56 @@
+<html>
+<body>
+<head>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+
+</head>
+<header class="regback">
+    <div class="regmain">
+    <section class="clip-path">
+
+<article class="reg-inner">
+  <!--  <form action="/verify" method="post">
+    Email:<input type="email" name="email">
+    <input type="submit" value="Submit" CLASS="info" placeholder="email@email.com">
+</form>
+    <form action="/validate" method="post">
+    <h1>One time password has been sent to the mail id. please check </h1>
+    <p>by <b>Art gallery</b></p>
+    Enter OTP: <input type="text" name="otp" CLASS="info" placeholder="otp">
+    <input type="submit" value="Submit">
+</form>-->
+
+
+
+            <form action="{{ url_for("regestration") }}" method="POST" class="regform" enctype="multipart/form-data" >
+                <div><h4 class="reghead"> Create Account</h4></div>
+                <div class="msg">{{ msg1 }}</div>
+                <div class="msg">{{ msg }}</div>
+                <div>  <input type="text" name="nm" class="info" placeholder="FULL NAME"></div>
+                <!--<div>  <input type="text" name="email" class="info" PLACEHOLDER="EMAIL ID"> </div>-->
+                <div>  <input type="text" name="mobno" class="info" placeholder="MOB NO"></div>
+                <div>  <input type="text" name="add" class="info" placeholder="ADDRESS"></div>
+                <div>  <input type="text" name="aadhar" class="info" placeholder="AADHAR NO"></div>
+                <div>  <input type="text" name="pswd" class="info" placeholder="CREATE PASSWORD"></div>
+
+                <div>
+
+
+
+<select name="role" id="lang" class="info select">
+    <option value="" >ROLE</option>
+  <option value="user" name="user" >User</option>
+  <option value="artist" name="artist" >Artist</option>
+
+</select></div>
+                <div>  <input type="submit" class="info regsub" ></div>
+
+            </form>
+
+
+
+</article>
+    </section></div>
+
+</header></body>
+</html>

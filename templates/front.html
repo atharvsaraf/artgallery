@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Placement portal</title>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.12.1-web/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<!-- sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div>
+        <button class="close-btn" id="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- nav-links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="projects.html">projects</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        <!-- social icons -->
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.twitter.com" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" class="social-icon">
+              <i class="fab fa-squarespace"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" class="social-icon">
+              <i class="fab fa-behance"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- end of sidebar -->
+
+
+<header id="home">
+      <nav class="navbar">
+        <div class="nav-center">
+          <div class="nav-header">
+            <!--<img src="{{ url_for("static",filename="images/paint.jpg")}}" alt="" class="nav-logo">-->
+            <button type="button" class="nav-toggle" id="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+            <ul class="nav-links show-links" id="nav-links">
+              <li>
+                <a href="#home" class="nav-link scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link scroll-link">about</a>
+              </li>
+              <li>
+                <a href="{{ url_for("faq") }}" class="nav-link scroll-link">FAQ</a>
+              </li>
+              <li>
+                <a href="#featured" class="nav-link scroll-link">featured</a>
+              </li>
+              <li>
+                <a href="#gallery" class="nav-link scroll-link">gallery</a>
+              </li>
+
+            </ul>
+          <ul class="nav-icons">
+            <li>
+              <a href="https://facebook.com/" class="nav-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" class="nav-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.whatsapp.com/" class="nav-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    <div class="hero">
+      <div class="hero-banner">
+        <h1>Art Gallery</h1>
+        <p>
+            Feel the beauty of art.
+        </p>
+
+        <a href="{{ url_for("userlogin") }}" class="btn hero-btn scroll-link">User login</a>
+          <a href="{{ url_for("adminlogin") }}" class="btn hero-btn scroll-link">Admin login</a>
+          <a href="{{ url_for("artistlogin") }}" class="btn hero-btn scroll-link">Artist login</a>
+          <div class="reg"><a href="{{ url_for("verify") }}" class="btn hero-btn scroll-link"> Regestration</a></div>
+      </div>
+    </div>
+
+    </header>
+<section class="section" id="about">
+      <div class="section-title">
+        <h2>
+          ABOUT <span>Art Gallery</span>
+        </h2>
+
+      </div>
+      <div class="section-center about-center">
+        <article class="about-img">
+          <img src="{{ url_for("static",filename="image/artback2.jpg") }}" class="about-photo" alt="">
+        </article>
+        <article class="about-info">
+          <h3>VISION </h3>
+          <p>To shape and enrich the quality of life for the residents and visitors of Grand Valley State University and to become a leader in the areas of art appreciation and interdisciplinary education for the local community.
+              </p>
+<h3>MISSION</h3>
+            <p>
+The Art Gallery acquires, preserves, interprets, exhibits, and otherwise makes accessible works of art for the benefit of a variety of audiences, in support of the interdisciplinary educational goals of the University and for the benefit of the community at large.</p>
+          <a href="#" class="btn">read more</a>
+        </article>
+      </div>
+    </section>
+<section class="section" id="featured">
+      <div class="section-title">
+        <h2>featured <span>arts</span></h2>
+
+      </div>
+      <div class="section-center featured-center">
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for("static",filename="image/nature.jpg")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              Art gallery
+            </p></div>
+            <div class="tour-info">
+              <h4>Nature</h4>
+              <p>Experience Certainty
+Experience Energy
+Beyond the Obvious.</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                India
+                </span>
+              </p>
+              <p>Avg price</p>
+              <p>4$</p>
+            </div>
+            </div>
+
+        </article>
+        <article class="tour-card">
+          <div class="tour-img-container">
+             <img src="{{ url_for("static",filename="image/art2.jpg")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              march 25 2021
+            </p>
+          </div>
+          <div class="tour-info">
+            <h4>Arcylic</h4>
+            <p>Beyond imagination</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  USA
+                </span>
+              </p>
+              <p>Avg price</p>
+              <p>12$</p>
+            </div>
+          </div>
+
+        </article>
+        <article class="tour-card">
+          <div class="tour-img-container">
+             <img src="{{ url_for("static",filename="image/art3.jpg")}}" class="tour-img" alt="">
+            <p class="tour-date">
+                Art Gallery
+            </p>
+          </div>
+          <div class="tour-info">
+            <h4>Water color</h4>
+            <p>Art that matters.</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  hongkong
+                </span>
+              </p>
+              <p>Avg price</p>
+              <p>10 $</p>
+            </div>
+          </div>
+
+        </article>
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for("static",filename="image/art4.jpg")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              Art Gallery
+            </p>
+          </div>
+          <div class="tour-info">
+            <h4>oil paintings</h4>
+            <p>Mindblowing and fanastic</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  India
+                </span>
+              </p>
+              <p>Avg price</p>
+              <p>11 $</p>
+            </div>
+          </div>
+
+        </article>
+      </div>
+      <div class="tour-btn">
+        <a href="#" class="btn">all arts</a>
+      </div>
+    </section>
+<section id="gallery">
+  <div class="gallery-center">
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/about1.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/about-img.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/art4.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/beach.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+     <img src="{{ url_for("static",filename="image/nature.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/art2.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+     <img src="{{ url_for("static",filename="image/night.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/sun.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+  </div>
+</section>
+
+    <script src="{{ url_for("static",filename="front.js") }}"></script>
+</body>
+</html>

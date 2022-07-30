@@ -1,0 +1,26 @@
+
+{% extends "adminmaster.html" %}
+{% block contents %}
+<div class="subtitle" >Change Password </div>
+<hr>
+    <form action="{{ url_for("adminchangepwd") }}" method="post" name="frm" >
+    <table>
+    <tr><td>Old Password</td><td><input type="password" name="opwd" required ></td></tr>
+    <tr><td>New Password</td><td><input type="password" name="npwd" required ></td></tr>
+    <tr><td>Confirm</td><td><input type="password" name="confirm" required onblur="checkpwd()" ></td></tr>
+    <tr><td></td><td><input type="submit" value="Change" ></td></tr>
+    </table>
+    </form>
+<hr>
+    <script>
+    function checkpwd()
+    {
+    if(document.frm.npwd.value!=document.frm.confirm.value)
+    {
+        alert("Password not matching with confirm value");
+        document.frm.npwd.value="";
+        document.frm.confirm.value="";
+    }
+    }
+    </script>
+{% endblock %}

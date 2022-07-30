@@ -1,0 +1,20 @@
+
+{% extends "adminmaster.html" %}
+{% block contents %}
+<div class="subtitle" >Add Painting</div>
+<hr>
+<form action="{{ url_for("adminaddpainting") }}" method="POST" enctype="multipart/form-data" >
+<table cellspacing="5" >
+    <tr><td>Painting</td><td><input type="file" name="photo" accept="image/*" id="file"
+               onchange="Filevalidation()" required ></td></tr>
+    <tr><td>Artist</td><td><input type="text" name="artist"  required ></td></tr>
+    <tr><td>Catagory</td><td>{{ catagories|safe }}</td></tr>
+    <tr><td>Size</td><td><input type="text" name="size"  required ></td></tr>
+    <tr><td>Price</td><td><input type="text" name="price"  required ></td></tr>
+    <tr><td></td><td><input type="submit" value="Add" ></td></tr>
+</table>
+</form>
+<hr>    <script src="{{ url_for("static",filename="valid.js") }}"></script>
+
+
+{% endblock %}

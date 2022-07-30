@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{ url_for('static',filename='accounts.css') }}" type="text/css" rel="stylesheet" >
+</head>
+<body>
+<div class="achead">
+    <h1 class="blackhead">Artists Account</h1>
+</div>
+<div class="tables">
+    <table class="newtable">
+        <tr class="row"><th>Role</th><th>Name</th><th>Address</th><th>Mobile No.</th><th>Email</th>
+        <th>Aadhar No.</th></tr>
+        {% for id,pswd,role,nm,add,mob,email,aadhar  in lst %}
+        <tr class="row"><th>{{ role }}</th><th>{{ nm }}</th><th>{{ add }}</th><th>{{ mob }}</th><th>{{ email }}</th>
+        <th>{{ aadhar }}</th></tr>
+        {% endfor %}
+
+    </table>
+</div>
+ <div class="msg">
+            {{ msg }}
+        </div>
+<a href="{{ url_for("login") }}" class="btn">LOGOUT</a>
+
+</body>
+</html>

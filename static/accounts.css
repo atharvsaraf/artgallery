@@ -1,0 +1,18 @@
+.newtable {
+            border-collapse: collapse;
+            width: 100vw;
+     text-align: center;
+        }
+
+
+th, td {
+    text-align: left;
+    padding: 8px;
+border:deepskyblue 1px solid;
+
+
+        }
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+        }

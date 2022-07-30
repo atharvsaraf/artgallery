@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Form Complete</title>
+    <!-- css -->
+       <link href="{{ url_for('static',filename='styleadminlog.css') }}" type="text/css" rel="stylesheet" >
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="container">
+      <header>
+        <h2 class="header-title">Artist Login</h2>
+        <button class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+        <div class="msg-1">{{ msg }}</div>
+      <form action="{{ url_for("artistlogin") }}" method="POST">
+        <div class="form-control">
+          <label for="name">Username</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-input"
+          />
+        </div>
+        <div class="form-control">
+          <label for="resource">Password</label>
+          <input
+            type="text"
+            id="resource"
+            name="password"
+            class="form-input"
+          />
+        </div>
+
+        <button class="submit-btn">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

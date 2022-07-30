@@ -1,0 +1,25 @@
+
+{% extends "adminmaster.html" %}
+{% block contents %}
+    <table cellspacing="20px" >
+    <tr>
+        <td>
+            <img src="{{ url_for("static",filename="paintings/"+inm) }}" height="400px" >
+        </td>
+        <td style="vertical-align: top" >
+            <table cellspacing="5" >
+            <tr><td>Artist</td><td>{{ record[1] }}</td></tr>
+            <tr><td>Size</td><td>{{ record[3] }}</td></tr>
+            <tr><td>Price</td><td>Rs {{ record[4] }}/-</td></tr>
+            <tr><td colspan="2" ><hr></td></tr>
+            {% if session["userid"]==record[6] %}
+                <tr><td colspan="2"><a href="url" class="btn" >Edit</a> <a href="{{ url_for("admindelpainting",pid=record[0]) }}" class="btn" >Delete</a></td></tr>
+            {% endif %}
+
+            </table>
+        </td>
+    </tr>
+    </table>
+
+
+{% endblock %}

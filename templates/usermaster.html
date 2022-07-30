@@ -1,0 +1,44 @@
+
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for("static",filename="project.css") }}" type="text/css" />
+<body>
+<table width="100%"  >
+    <tr>
+        <td style="width: 15%" >
+
+            <img src="{{ url_for("static",filename="images/admin.jpg")  }}" class="logophoto" height="100px" />
+        </td>
+        <td>
+           <span class="title" > The Indian Art Gallary</span>
+        </td>
+        <td style="width: 20%;text-align: center" >
+            <img src="{{ url_for("static",filename="images/paint.jpg") }}" height="120px" />
+
+        </td>
+    </tr>
+</table>
+<hr>
+<table width="100%"  >
+    <tr style="vertical-align: top" >
+        <td style="width: 250px;" >
+            <table cellspacing="5px" >
+                <tr><td class="menubar" ><a href="{{ url_for("index") }}" class="menulink" >Home</a></td></tr>
+                <tr><td class="menubar" ><a href="{{ url_for("userpaintings") }}" class="menulink" >Paintings</a></td></tr>
+               <!-- <tr><td class="menubar" ><a href="" class="menulink" >Artists</a></td></tr>-->
+                <tr><td class="menubar" ><a href="{{ url_for("adminchangepwd") }}" class="menulink" >Change Password</a></td></tr>
+
+                <tr><td class="menubar" ><a href="/" class="menulink" >Logout</a></td></tr>
+            </table>
+
+        </td>
+        <td   >
+            <div class="mainbox" >
+            {% block contents %}
+            contents
+            {% endblock %}
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

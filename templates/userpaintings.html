@@ -1,0 +1,16 @@
+
+{% extends "usermaster.html" %}
+{% block contents %}
+<div class="subtitle" >Painting </div>
+<hr>
+<form action="{{ url_for("adminpaintings") }}"  >
+ {{ catagories|safe }} <input type="submit" value="Show" >
+</form>
+<hr>
+{% for pid,inm in paintings %}
+    <a href="{{ url_for("usershowpainting",pid=pid) }}" >
+    <img src="{{ url_for("static",filename="paintings/"+inm) }}" height="100px" class="photo" >
+    </a>
+{% endfor %}
+
+{% endblock %}
